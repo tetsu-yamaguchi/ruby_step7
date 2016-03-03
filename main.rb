@@ -10,13 +10,17 @@ novel_1 = Book.new('3', '小説1', 'xxxx-zzzz')
 shelf = Shelf.new([hobby_1, hobby_2, novel_1])
 
 # 会員
-member = Member.new('1', 'ドヤオタクロウ')
+member = Member.new('1', 'ドヤオタクロウ', 'male')
+p member
 
 #本が存在するか問い合わせる
 if !shelf.is_exist_book?('4')
   puts '無いのであった...'
 end
+
+puts "無いけど強制的に借りてやる！"
 shelf.rental_book('4', member.id)
+
 if shelf.is_exist_book?('3')
   book, rental = shelf.rental_book('3', member.id) # 戻り値は、図書と図書貸出のオブジェクト
   puts "#{book.title} を借りました!"

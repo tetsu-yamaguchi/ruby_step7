@@ -11,7 +11,7 @@ class Shelf
   end
   def rental_book (bookid,memberid)
     if !is_exist_book?(bookid)
-      puts ("指定の図書IDの図書は存在しないか貸し出されています")
+      puts ("指定の図書IDの図書は存在しないか貸し出されているのであった")
     else
       n=nil
       @book.each do |a|

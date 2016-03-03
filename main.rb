@@ -18,7 +18,8 @@ if !shelf.is_exist_book?('4')
   puts '無いのであった...'
 end
 
-puts "無いけど強制的に借りてやるもん！"
+
+puts "無いけど強制的に借りてやるぞおおおお！"
 shelf.rental_book('4', member.id)
 
 if shelf.is_exist_book?('3')
